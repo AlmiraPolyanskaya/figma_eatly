@@ -12,18 +12,63 @@
             color: #201F1F;
         }
 
-        .menu {
-            display: inline;
-            margin: 40px;
-            text-decoration: none;
-            color: #606060;
-            font-size: 24px;
+        .logo {
+            position: absolute;
+            margin-left: 5px;
         }
 
-        .logo {
+        .left-nav {
             float: left;
-            margin-right: 100px;
-            margin-top: 25px;
+            margin-left: 150px;
+            margin-bottom: 10px;
+        }
+
+        .left-nav ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .left-nav li {
+            margin-bottom: 10px;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .left-nav li a {
+            color: #606060;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .right-nav {
+            float: right;
+            margin-bottom: 10px;
+        }
+
+        .right-nav ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .right-nav li {
+            margin-bottom: 10px;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .right-nav li a {
+            display: inline;
+            color: #606060;
+            text-decoration: none;
+            padding: 10px;
         }
 
         hr {
@@ -32,7 +77,7 @@
         }
 
         .maindiv {
-            width: 800px;
+            width: 500px;
             float: left;
             margin-left: 100px;
         }
@@ -77,6 +122,18 @@
             justify-items: stretch;
         }
 
+        .button_menu {
+            background-color: #5C4EAE;
+            border-color: #5C4EAE;
+            border-style: solid;
+            border-width: 1px;
+            border-radius: 15px;
+            color: white;
+            width: 100px;
+            height: 20px;
+            font-size: 15px;
+        }
+
         .button1 {
             background-color: #5C4EAE;
             border-color: #5C4EAE;
@@ -114,13 +171,19 @@
 <body>
     <header class="header">
         <img class="logo" src="assets/pictures/Logo_full.png" alt="Лого" />
-        <nav>
-            <a class="menu" href="#">Menu</a></li>
-            <a class="menu" href="#">Blog</a></li>
-            <a class="menu" href="#">Pricing</a></li>
-            <a class="menu" href="#">Contact</a></li>
-            <a class="menu" href="#">Login</a>
-            <button class="menu">Sign Up</button>
+        <nav class="left-nav">
+            <ul>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <nav class="right-nav">
+            <ul>
+                <li><a href="#">Login</a></li>
+                <li><button class=button_menu>Sign Up</button></li>
+            </ul>
         </nav>
     </header>
 
@@ -177,7 +240,7 @@
     </main>
     <footer>
         <img class="logofooter" src="assets/pictures/Logo_full.png" alt="Лого" />
-        <p class="footerp">&#169; © 2023 EATLY All Rights Reserved.</p>
+        <p class="footerp">&#169; 2023 EATLY All Rights Reserved.</p>
     </footer>
 </body>
 
